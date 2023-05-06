@@ -3,7 +3,7 @@ The essay scoring model in this repository uses a combination of natural languag
 The neural network component is responsible for training a regression model that takes the extracted features, including the word embeddings and additional grammar and punctuation features, as input. The neural network architecture consists of multiple layers with dropout regularization.
 ## Requirements
 
-- Python 3.x
+- Python 3.10
 - pandas
 - numpy
 - nltk
