@@ -15,10 +15,11 @@ The neural network component is responsible for training a regression model that
 Install the required dependencies using pip:
 `pip install pandas numpy nltk scikit-learn keras gensim spacy`
 
-Download the necessary NLTK and spaCy resources:
+Download the necessary NLTK and spaCy:
 
 `python -m nltk.downloader stopwords punkt wordnet`
 `python -m spacy download en_core_web_sm`
+
 
 
 ## Usage
@@ -28,16 +29,20 @@ Download the necessary NLTK and spaCy resources:
 `git clone https://github.com/hamidrezamaneshti/essay-scoring-model.git`
 `cd essay-scoring-model`
 
-
 2. Download the essay dataset (Training_Set_rel3.tsv) and place it in the `dataset` directory.
+`https://www.kaggle.com`
 
-3. Run the script:
+3. Download the Word2Vec model for word embeddings.
+`[word2vec_model.bin](https://uupload.ir/view/word2vec_model_wsys.bin/)`
 
-`python essay_scoring_model.py`
+4. Run the script:
 
-4. The script will preprocess the dataset, train the essay scoring model, and save the trained models and necessary information for future use.
+`python essay_scoring_model.py` For train the model.
+`python predicte_score.py` For run and test model.
 
-5. Once the script finishes running, you can use the trained models to predict scores for new essays.
+5. The script will preprocess the dataset, train the essay scoring model, and save the trained models and necessary information for future use.
+
+6. Once the script finishes running, you can use the trained models to predict scores for new essays.
 
 ## File Description
 
@@ -46,6 +51,7 @@ Download the necessary NLTK and spaCy resources:
 - `word2vec_model.bin`: The saved Word2Vec model for word embeddings.
 - `essay_scoring_model.h5`: The saved Keras model for essay scoring.
 - `min_max_scores.pkl`: A pickle file containing the minimum and maximum scores from the original dataset.
+- `predicte_score.py`: This script use for run and test the trained model. 
 
 ## References
 
